@@ -18,7 +18,7 @@ const addTodo = (todo) => {
 
 
 // A function that removes an item at a given index from our todo list array. You can use splice!
-const removeTodo = () => {
+const removeTodo = (i) => {
   todos.splice(i, 1)
 }
 
@@ -99,7 +99,7 @@ const refresh = () => {
   clearAllTodos()
   printAll()
 }
-refresh()
+
 
 
 
@@ -124,7 +124,8 @@ const newTodo = {
 }
 
 addTodo(newTodo)
-// printTodo(newTodo)
+printTodo(newTodo)
+inputBox.value = ''
 
 /* 
 
@@ -136,5 +137,5 @@ button.addEventListener('click', clearAllTodos(), addTodo(), printAll())
 // const clear = document.querySelector('.add-todo1')
 // clear.addEventListener('click' clearAllTodos())
 
-
+refresh()
 // And you're DONE with the best interface we've written yet for a todos app!
